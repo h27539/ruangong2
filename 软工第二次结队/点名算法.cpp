@@ -16,7 +16,7 @@ struct student{
 }stu[90],item;
 int main() {
     string course,path;
-    cout<<"输入五门课程到勤信息所在文件夹目录（eg.user/tables）："<<endl;
+    cout<<"输入五门课程到勤信息所在文件夹目录（eg.user/tables/）："<<endl;
     cin>>path;
     int i=0;
 //    cout<<"课程序号（1/2/3/4/5）：";
@@ -25,7 +25,7 @@ int main() {
     for (int iii=1; iii<=5; iii++) {
         string csv_path;
         
-        csv_path=path+"/course"+to_string(iii)+".csv";
+        csv_path=path+"course"+to_string(iii)+".csv";
 //        cout<<path<<endl;
         ifstream csv_data(csv_path, ios::in);
     //    infile.open(str.c_str(), ios::in);
